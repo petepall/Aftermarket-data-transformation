@@ -1,8 +1,10 @@
+from easygui import fileopenbox, filesavebox
 
-with open('s907data.txt', 'r') as file_r:
+file_open = fileopenbox()
+with open(file_open, 'r') as file_r:
     lines = file_r.readlines()
 
-data = []
+data: list = []
 for line in lines[::-1]:
     word = line.split()
 
@@ -15,7 +17,8 @@ for line in lines[::-1]:
 
 header_line = (f"DMDUNIT           SALEPLANCOHISTSTQTY          "
                "TSTARTDATPERIOD\n")
-with open('s907data-rework.txt', 'w') as file_w:
+file_save = filesavebox()
+with open(file_save, 'w') as file_w:
     file_w.write(header_line)
     for line in data:
         file_w.write(line)
