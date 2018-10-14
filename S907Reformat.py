@@ -1,6 +1,11 @@
 from easygui import fileopenbox, filesavebox
 
 file_open: str = fileopenbox()
+
+if file_open is None:
+    print("No file is selected - application stopped!")
+    raise SystemExit
+
 with open(file_open, 'r') as file_r:
     lines = file_r.readlines()
 
@@ -17,7 +22,13 @@ for line in lines[::-1]:
 
 header_line = (f"DMDUNIT           SALEPLANCOHISTSTQTY          "
                "TSTARTDATPERIOD\n")
-file_save: str = filesavebox()
+file_save: str = ''
+while True:
+    if file_save == '':
+        file_save = filesavebox()
+    else:
+        break
+
 with open(file_save, 'w') as file_w:
     file_w.write(header_line)
     for line in data:

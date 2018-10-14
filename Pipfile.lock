@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ff9642fcfefdd196731283041b11231f54200352dd42071a89fc5dbe84ce128b"
+            "sha256": "0b6c6acd1af9a5341e068552305da77cce0570b0fc5e925f3b6540d4484ebb39"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,16 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "easygui": {
+            "hashes": [
+                "sha256:690658af9fca3f2f2a55f24421045f9b33ca33c877ed5fb61d4b942d8ec335f3",
+                "sha256:dbc89afbb1aca83830ea4af568eb2491654e16b2706a14d040757fdf1fafbbfe"
+            ],
+            "index": "pypi",
+            "version": "==0.98.1"
+        }
+    },
     "develop": {
         "atomicwrites": {
             "hashes": [
@@ -30,6 +39,13 @@
                 "sha256:ca4be454458f9dec299268d472aaa5a11f67a4ff70093396e1ceae9c76cf4bbb"
             ],
             "version": "==18.2.0"
+        },
+        "autopep8": {
+            "hashes": [
+                "sha256:655e3ee8b4545be6cfed18985f581ee9ecc74a232550ee46e9797b6fbf4f336d"
+            ],
+            "index": "pypi",
+            "version": "==1.4"
         },
         "flake8": {
             "hashes": [
