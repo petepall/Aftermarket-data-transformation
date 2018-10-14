@@ -1,6 +1,7 @@
 from easygui import fileopenbox, filesavebox
 
-file_open: str = fileopenbox()
+file_open: str = fileopenbox(msg="select your input file",
+                             title="Select file")
 
 if file_open is None:
     print("No file is selected - application stopped!")
@@ -25,7 +26,8 @@ header_line = (f"DMDUNIT           SALEPLANCOHISTSTQTY          "
 file_save: str = ''
 while True:
     if file_save == '':
-        file_save = filesavebox()
+        file_save = filesavebox(msg="Select/Enter your output file",
+                                title="Select/Enter file")
     else:
         break
 
