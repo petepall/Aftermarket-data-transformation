@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 easygui = "*"
 pyautogui = "*"
-"python3-xlib" = "*"
 
 [dev-packages]
 "flake8" = "*"
