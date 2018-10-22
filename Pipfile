@@ -10,8 +10,7 @@ pyautogui = "*"
 [dev-packages]
 "flake8" = "*"
 mypy = "*"
-pytest = "*"
-"autopep8" = "*"
+"pep8" = "*"
 
 [requires]
 python_version = "3.7"
